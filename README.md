@@ -10,15 +10,6 @@
 
 ## Project Overview
 
-This project demonstrates...
-
-
-
-
-# Dockerized Flask & PostgreSQL Application
-
-## Project Overview
-
 This project demonstrates how to deploy a multi container web application using Docker Compose. A custom Flask web application communicates with a PostgreSQL database while following production oriented containerization practices such as persistent storage, environment variables, health checks, restart policies, and Docker networking.
 
 ---
