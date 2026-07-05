@@ -1,5 +1,5 @@
 # Dockerized Flask + PostgreSQL
-A multi container web application demonstrating Docker Compose orchestration, PostgreSQL integration, persistent storage, and production inspired containerization practices.
+A multi container web application demonstrating Docker Compose orchestration, PostgreSQL integration, persistent storage, and production oriented containerization practices.
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?logo=docker&logoColor=white)
