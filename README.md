@@ -82,47 +82,61 @@ Dockerized-Flask-PostgreSQL-Application/
 
 ---
 
-## Project Screenshots
+## 📸 Project Screenshots
 
 ### 1. Running Flask Container
 
-Shows the Flask container running after building the Docker image.
+The Flask application running inside a Docker container after building the custom image.
+
+![Running Flask Container](Screenshots/01_running_flask_container.png)
 
 ---
 
 ### 2. Flask Application in Browser
 
-Demonstrates that the application is accessible from a web browser.
+Verifies that the Flask application is accessible through the browser using Docker port mapping.
+
+![Flask Application in Browser](Screenshots/02_flask_application_running.png)
 
 ---
 
 ### 3. Docker Compose Startup
 
-Shows Docker Compose building the application, starting PostgreSQL, waiting for the database health check, and then starting the Flask application.
+Docker Compose building the application, creating the network and volume, starting PostgreSQL, waiting for the database health check, and then launching the Flask service.
+
+![Docker Compose Startup](Screenshots/03_docker_compose_running.png)
 
 ---
 
 ### 4. Browser Test After Docker Compose
 
-Confirms that the complete multi container application is accessible after orchestration.
+Confirms the multi container application is successfully running after orchestration with Docker Compose.
+
+![Browser Test After Docker Compose](Screenshots/04_compose_app_browser_test.png)
 
 ---
 
 ### 5. Docker Compose Service Status
 
-Displays both the Flask and PostgreSQL containers running successfully.
+Shows both the Flask and PostgreSQL containers running successfully, with PostgreSQL reporting a healthy status.
+
+![Docker Compose Service Status](Screenshots/05_multi_container_status.png)
 
 ---
 
-### 6. Docker Volume
+### 6. Persistent Docker Volume
 
-Shows the persistent Docker volume used to store PostgreSQL data.
+Displays the Docker volume used to persist PostgreSQL data across container restarts and recreation.
+
+![Persistent Docker Volume](Screenshots/06_persistent_storage.png)
 
 ---
 
-### 7. Docker Network
+### 7. Docker Compose Network
 
-Displays the automatically created Docker Compose network that enables communication between services.
+Shows the automatically created Docker network that enables communication between the Flask and PostgreSQL containers using service names instead of IP addresses.
+
+![Docker Compose Network](Screenshots/07_docker_network.png)
 
 ---
 
