@@ -25,6 +25,9 @@ jobs:
       - name: Show running containers
         run: docker ps
 
+      - name: Test web app response
+        run: curl http://localhost:5000
+
       - name: Show Docker Compose logs
         run: docker compose logs
 
