@@ -58,6 +58,6 @@ jobs:
           ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.VM_USER }}@${{ secrets.VM_HOST }} "
             cd ${{ secrets.VM_PROJECT_PATH }} &&
             git pull origin main &&
-            sudo docker compose up -d --build &&
-            sudo docker compose ps
+             docker compose up -d --build &&
+             docker compose ps
           "
