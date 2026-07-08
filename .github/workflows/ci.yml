@@ -26,7 +26,13 @@ jobs:
         run: docker ps
 
       - name: Test web app response
-        run: curl http://localhost:5000
+        run: |
+          for i in {1..10}; do
+            curl http://localhost:5000 && exit 0
+            echo "App not ready yet. Retrying..."
+            sleep 3
+          done
+          exit 1
 
       - name: Show Docker Compose logs
         if: always()
