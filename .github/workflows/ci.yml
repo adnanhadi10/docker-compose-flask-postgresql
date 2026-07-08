@@ -53,6 +53,11 @@ jobs:
           echo "${{ secrets.VM_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-      - name: Test SSH connection
+      - name: Deploy application to VM
         run: |
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.VM_USER }}@${{ secrets.VM_HOST }} "echo SSH connection successful"
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.VM_USER }}@${{ secrets.VM_HOST }} "
+            cd ${{ secrets.VM_PROJECT_PATH }} &&
+            git pull origin main &&
+            sudo docker compose up -d --build &&
+            sudo docker compose ps
+          "
