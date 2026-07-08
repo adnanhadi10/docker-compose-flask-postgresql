@@ -18,3 +18,16 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t dockerized-flask-postgresql-app .
+
+      - name: Start Docker Compose services
+        run: docker compose up -d
+
+      - name: Show running containers
+        run: docker ps
+
+      - name: Show Docker Compose logs
+        run: docker compose logs
+
+      - name: Stop Docker Compose services
+        if: always()
+        run: docker compose down
